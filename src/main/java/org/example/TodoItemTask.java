@@ -1,2 +1,4 @@
-package org.example;public class TodoItemTask {
+package org.example;
+
+public class TodoItemTask {
 }
