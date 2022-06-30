@@ -10,9 +10,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TodoItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TodoItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TodoItemTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TodoItemTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/PersonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/PersonTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/TodoItemTaskTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/TodoItemTaskTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/TodoItemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/TodoItemTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +69,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.TodoItemTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="TodoIT" />
@@ -81,22 +79,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PersonTest.correctStringReturned" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TodoIT" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.PersonTest" />
-      <option name="METHOD_NAME" value="correctStringReturned" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -113,6 +95,21 @@
       <option name="MAIN_CLASS_NAME" value="org.example.TodoItemTaskTest" />
       <option name="METHOD_NAME" value="getSummary" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoItemTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TodoIT" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.TodoItemTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -151,11 +148,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.TodoItemTest" />
         <item itemvalue="JUnit.TodoItemTaskTest.getSummary" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.TodoItemTest.isOverdue" />
         <item itemvalue="JUnit.TodoItemTest.getSummary" />
-        <item itemvalue="JUnit.PersonTest.correctStringReturned" />
       </list>
     </recent_temporary>
   </component>
@@ -174,7 +171,13 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1656451747230</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="Person and test">
+      <created>1656581016213</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1656581016213</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,11 +200,6 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Person.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/Person.java</url>
           <line>8</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
@@ -212,18 +210,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/TodoItem.java</url>
-          <line>38</line>
+          <line>31</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/TodoItemTask.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="29" />
+          <line>17</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/TodoItemTask.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="31" />
+          <line>45</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

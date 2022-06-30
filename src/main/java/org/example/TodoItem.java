@@ -2,6 +2,9 @@ package org.example;
 
 import java.time.LocalDate;
 import  java.time.format.DateTimeFormatter;
+
+/** TodoItem Class task assigned to a person
+ */
 public class TodoItem {
     private int id;
     private String  title, taskDescription;
@@ -12,21 +15,11 @@ public class TodoItem {
     public TodoItem(int id, String title, LocalDate deadLine, Person creator) {
 //        this();
         this.id = id;
-        this.title = title;
+        setTitle(title);
 //        this.taskDescription = taskDescription;
-        this.deadLine = deadLine;
-        this.done = false;
-        this.creator = creator;
+        setDeadLine(deadLine);
+        setCreator(creator);
     }
-/*
-    public TodoItem() {
-        this.id = 0;
-        this.title = "undefined";   //change tires
-//        this.taskDescription = "undefined";
-        this.deadLine =  LocalDate.now();   // when task has to be finished
-        this.done = false;  //task finished ?
-        this.creator = new Person();
-    }*/
 
     public String getSummary(){
         return "id: " +id + " title: " + title +
@@ -37,7 +30,7 @@ public class TodoItem {
     public boolean isOverdue() {
         LocalDate dateToday = LocalDate.now();
         if (dateToday.isAfter(deadLine) ) {
-            done = false;
+            setDone(false);
             return true;
         }
         return  false;
@@ -72,6 +65,8 @@ public class TodoItem {
     }
 
     public void setDeadLine(LocalDate deadLine) {
+        if (deadLine == null)
+            throw new IllegalArgumentException("deadLine should not be null");
         this.deadLine = deadLine;
     }
 

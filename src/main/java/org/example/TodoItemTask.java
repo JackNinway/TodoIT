@@ -1,5 +1,7 @@
 package org.example;
 
+/** TodoItemTask maps a task (=TodoItem) to a person
+ */
 public class TodoItemTask {
 
     private int id;
@@ -8,18 +10,16 @@ public class TodoItemTask {
     private Person assignee;
 
     public TodoItemTask(int id, TodoItem todoItem, Person assignee) {
-        this.id = id;
-        this.assigned = assigned;
-        this.todoItem = todoItem;
-        this.assignee = assignee;
+       this.id = id;
+       setTodoItem(todoItem);
+       setAssignee(assignee);
     }
     public String getSummary(){
-        if (assignee != null) {
-            assigned = true;
-            return "id: " + id + " TodoItem and assigned to : " + todoItem.getSummary();
+        if (assigned) {
+            return "id: " + id + " TodoItem and assigned to : " + todoItem.getSummary() +"  is assigned: " + assigned;
         }
-        else
-            return "Task not assigned.";
+       else
+            return "task id: " + id + " not assigned.";
     }
 
     public int getId() {
@@ -43,6 +43,8 @@ public class TodoItemTask {
     }
 
     public void setTodoItem(TodoItem todoItem) {
+        if (todoItem == null)
+            throw new IllegalArgumentException("todoItem should not be null");
         this.todoItem = todoItem;
     }
 
@@ -51,6 +53,13 @@ public class TodoItemTask {
     }
 
     public void setAssignee(Person assignee) {
+        if (assignee == null) {
+            setAssigned(false);
+            throw new IllegalArgumentException("assignee should not be null");
+
+        }
+        else
+            setAssigned(true);
         this.assignee = assignee;
     }
 }

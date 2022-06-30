@@ -8,9 +8,9 @@ public class Person {
     public Person(int id, String firstName, String lastName, String email) {
 //        this();
         this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
+        setFirstName(firstName);
+        setLastName(lastName);
+        setEmail(email);
     }
 
     public Person() {
@@ -22,6 +22,7 @@ public class Person {
 
     public String getSummary(){
         return "id: " + id + " name: " + firstName + " " +lastName + " email: " + email;
+
     }
     // Getters & Setters
     public int getId() {
