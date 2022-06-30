@@ -1,7 +1,7 @@
 package org.example;
 
 import java.time.LocalDate;
-
+import  java.time.format.DateTimeFormatter;
 public class TodoItem {
     private int id;
     private String  title, taskDescription;
@@ -9,29 +9,38 @@ public class TodoItem {
     private boolean done;
     private Person creator;
 
-    public TodoItem(int id, String title, String taskDescription, LocalDate deadLine, boolean done, Person creator) {
-        this();
+    public TodoItem(int id, String title, LocalDate deadLine, Person creator) {
+//        this();
         this.id = id;
         this.title = title;
-        this.taskDescription = taskDescription;
+//        this.taskDescription = taskDescription;
         this.deadLine = deadLine;
-        this.done = done;
-        this.creator = new Person();
+        this.done = false;
+        this.creator = creator;
     }
-
+/*
     public TodoItem() {
         this.id = 0;
-        this.title = "undefined";
-        this.taskDescription = "undefined";
-        this.deadLine =  LocalDate.now();
-        this.done = false;
+        this.title = "undefined";   //change tires
+//        this.taskDescription = "undefined";
+        this.deadLine =  LocalDate.now();   // when task has to be finished
+        this.done = false;  //task finished ?
         this.creator = new Person();
-    }
+    }*/
 
     public String getSummary(){
-        return "id: " +id + "\ntitle: " + title + "\nDescription: " +taskDescription
-                + "\nDeadline: " + deadLine + "\nDone: " +done + "\nPerson: " +creator;
+        return "id: " +id + " title: " + title +
+                 " Deadline: " + deadLine  + " Person: " + creator.getSummary();
 
+    }
+
+    public boolean isOverdue() {
+        LocalDate dateToday = LocalDate.now();
+        if (dateToday.isAfter(deadLine) ) {
+            done = false;
+            return true;
+        }
+        return  false;
     }
 //
     public int getId() {
