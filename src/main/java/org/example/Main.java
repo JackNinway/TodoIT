@@ -15,11 +15,11 @@ public class Main {
         TodoItem toDo2 = new TodoItem(12,"painting", LocalDate.parse("2022-06-29"), ee );
 
         TodoItemTask todoItemTask1 = new TodoItemTask(1,toDo1, jn );
-        TodoItemTask todoItemTask2 = new TodoItemTask(2,toDo2, ee);
-
+//        TodoItemTask todoItemTask2 = new TodoItemTask(2,toDo2, ee);
+//
+//        System.out.println(toDo2.getSummary());
+//        System.out.println(todoItemTask1.getTodoItem().isOverdue());
         System.out.println(todoItemTask1.getSummary());
-        System.out.println(todoItemTask1.getTodoItem().isOverdue());
-//        System.out.println(todoItemTask2.getSummary());
 //        System.out.println(todoItemTask2.getTodoItem().isOverdue());
 
     }

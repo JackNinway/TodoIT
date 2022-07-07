@@ -7,20 +7,18 @@ import java.time.LocalDate;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TodoItemTest {
-    LocalDate deadLine = LocalDate.parse("2022-08-29");
-    Person jn = new Person(4, "Jack","Ninway", "jn@jn.se");
-    TodoItem toDo = new TodoItem(11,"car wash", deadLine, jn );
+    //Arrange
+    Person ee = new Person(20, "Erik","Erikson", "ee@ee.se");
+    TodoItem toDo2 = new TodoItem(12,"painting", LocalDate.parse("2022-06-29"), ee);
 
     @Test
     public void getSummary() {
-//Arrange
-
         String expectedStr = "";
-        String setStr = "id: 11 title: car wash Deadline: 2022-08-29 Person: id: 4 name: Jack Ninway email: jn@jn.se";
+        String setStr = "TodoItem{id=12, title='painting', deadLine=2022-06-29, done=false, creator=id: 20 name: Erik Erikson email: ee@ee.se}";
 //        id: 11 title: car wash Deadline: 2022-08-29 Person: id: 4 name: Jack Ninway email: jn@jn.se
 
 //Act
-        expectedStr = toDo.getSummary();
+        expectedStr = toDo2.getSummary();
 //Assert
         assertEquals(expectedStr, setStr, "No  match.");
 
@@ -28,8 +26,7 @@ class TodoItemTest {
 
     @Test
     public void isOverdue() {
-        assertFalse(toDo.isOverdue(),"date passed");
-
+        assertTrue(toDo2.isOverdue(),"date passed");
     }
 }
 

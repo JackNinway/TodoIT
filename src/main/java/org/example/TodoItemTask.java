@@ -16,12 +16,37 @@ public class TodoItemTask {
     }
     public String getSummary(){
         if (assigned) {
-            return "id: " + id + " TodoItem and assigned to : " + todoItem.getSummary() +"  is assigned: " + assigned;
+            return toString();
+
+//            return "id: " + id + " TodoItem and assigned to : " + todoItem.getSummary() +"  is assigned: " + assigned;
         }
        else
             return "task id: " + id + " not assigned.";
     }
 
+    @Override
+    public String toString() {
+        return "TodoItemTask{" +
+                "id=" + id +
+                ", is assigned=" + assigned +
+                ", \ntodoItem=" + todoItem.toString() +
+                ", \nis assigned to: " + assignee.getSummary() +
+                '}';
+    }
+
+    public Person getAssignee() {
+        return assignee;
+    }
+    public void setAssignee(Person assignee) {
+        if (assignee == null) {
+            setAssigned(false);
+            throw new IllegalArgumentException("assignee should not be null");
+
+        }
+        else
+            setAssigned(true);
+        this.assignee = assignee;
+    }
     public int getId() {
         return id;
     }
@@ -48,18 +73,5 @@ public class TodoItemTask {
         this.todoItem = todoItem;
     }
 
-    public Person getAssignee() {
-        return assignee;
-    }
 
-    public void setAssignee(Person assignee) {
-        if (assignee == null) {
-            setAssigned(false);
-            throw new IllegalArgumentException("assignee should not be null");
-
-        }
-        else
-            setAssigned(true);
-        this.assignee = assignee;
-    }
 }

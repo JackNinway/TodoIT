@@ -16,14 +16,14 @@ public class TodoItem {
 //        this();
         this.id = id;
         setTitle(title);
-//        this.taskDescription = taskDescription;
         setDeadLine(deadLine);
         setCreator(creator);
     }
 
     public String getSummary(){
-        return "id: " +id + " title: " + title +
-                 " Deadline: " + deadLine  + " Person: " + creator.getSummary();
+        return toString();
+//                "id: " +id + " title: " + title +
+//                 " Deadline: " + deadLine  + " Person: " + creator.getSummary();
 
     }
 
@@ -35,7 +35,18 @@ public class TodoItem {
         }
         return  false;
     }
-//
+
+    @Override
+    public String toString() {
+        return "TodoItem{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", deadLine=" + deadLine +
+                ", done=" + done +
+                ", creator=" + creator.getSummary() +
+                '}';
+    }
+
     public int getId() {
         return id;
     }

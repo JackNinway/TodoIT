@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class TodoItemTaskTest {
 
-    LocalDate deadLine = LocalDate.parse("2022-08-29");
+    LocalDate deadLine = LocalDate.parse("2022-06-29");
     Person jn = new Person(1, "Jack","Ninway", "jn@jn.se");
     TodoItem toDo = new TodoItem(11,"car wash", deadLine, jn );
     TodoItemTask taskToDo = new TodoItemTask(22, toDo, jn);
@@ -17,12 +17,12 @@ class TodoItemTaskTest {
     public void getSummary() {
 //Arrange
         String expectedStr = "";
-        String setStr = "id: 22 TodoItem and assigned to : id: 11 title: car wash Deadline: 2022-08-29 Person: id: 1 name: Jack Ninway email: jn@jn.se  is assigned: true";
-
+        String setStr = "TodoItemTask{id=22, is assigned=true, \n" +
+                "todoItem=TodoItem{id=11, title='car wash', deadLine=2022-06-29, done=false, creator=id: 1 name: Jack Ninway email: jn@jn.se}, \n" +
+                "is assigned to: id: 1 name: Jack Ninway email: jn@jn.se}";
 //Act
         expectedStr = taskToDo.getSummary();
 //Assert
         assertEquals(expectedStr, setStr, "No  match.");
-
     }
 }
