@@ -1,29 +1,51 @@
 package org.example;
 
+import sequencers.PersonIdSequencer;
+
+import java.util.Objects;
+
 public class Person {
 
     private  int id;
+    private AppUser credentials;
     private String firstName, lastName, email;
 
-    public Person(int id, String firstName, String lastName, String email) {
-//        this();
-        this.id = id;
+    public Person(String firstName, String lastName, String email) {
+        this();
         setFirstName(firstName);
         setLastName(lastName);
         setEmail(email);
     }
 
     public Person() {
-        this.id = 0;
-        this.firstName = "No";
-        this.lastName = "Name";
-        this.email = "no email";
+        this.id = PersonIdSequencer.nextId();
     }
 
-    public String getSummary(){
-        return "id: " + id + " name: " + firstName + " " +lastName + " email: " + email;
-
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return id == person.id && firstName.equals(person.firstName) &&
+                lastName.equals(person.lastName) && email.equals(person.email);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(id, firstName, lastName, email);
+    }
+
     // Getters & Setters
     public int getId() {
         return id;
@@ -55,5 +77,13 @@ public class Person {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public AppUser getCredentials() {
+        return credentials;
+    }
+
+    public void setCredentials(AppUser credentials) {
+        this.credentials = credentials;
     }
 }

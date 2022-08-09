@@ -11,11 +11,11 @@ public class PersonTest {
     @Test
     public void correctStringReturned() {
         //Arrange
-        Person jn = new Person(4, "Jack", "Ninway", "jn@jn.se");
+        Person jn = new Person("Jack", "Ninway", "jn@jn.se");
         String expectedStr = "";
         String setPerson = "id: 4 name: Jack Ninway email: jn@jn.se";
         //Act
-        expectedStr = jn.getSummary();
+        expectedStr = jn.toString();
 
         assertEquals(expectedStr, setPerson, "No  match.");
     }

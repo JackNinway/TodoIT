@@ -8,8 +8,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class TodoItemTest {
     //Arrange
-    Person ee = new Person(20, "Erik","Erikson", "ee@ee.se");
-    TodoItem toDo2 = new TodoItem(12,"painting", LocalDate.parse("2022-06-29"), ee);
+    Person ee = new Person( "Erik","Erikson", "ee@ee.se");
+    TodoItem toDo2 = new TodoItem("painting", LocalDate.parse("2022-06-29"), ee);
 
     @Test
     public void getSummary() {

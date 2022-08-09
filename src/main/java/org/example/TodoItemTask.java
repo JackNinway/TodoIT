@@ -1,5 +1,9 @@
 package org.example;
 
+import sequencers.TodoItemTaskIdSequencer;
+
+import java.util.Objects;
+
 /** TodoItemTask maps a task (=TodoItem) to a person
  */
 public class TodoItemTask {
@@ -9,16 +13,14 @@ public class TodoItemTask {
     private TodoItem todoItem;
     private Person assignee;
 
-    public TodoItemTask(int id, TodoItem todoItem, Person assignee) {
-       this.id = id;
+    public TodoItemTask(TodoItem todoItem, Person assignee) {
+       this.id = TodoItemTaskIdSequencer.nextId();
        setTodoItem(todoItem);
        setAssignee(assignee);
     }
     public String getSummary(){
         if (assigned) {
             return toString();
-
-//            return "id: " + id + " TodoItem and assigned to : " + todoItem.getSummary() +"  is assigned: " + assigned;
         }
        else
             return "task id: " + id + " not assigned.";
@@ -30,8 +32,21 @@ public class TodoItemTask {
                 "id=" + id +
                 ", is assigned=" + assigned +
                 ", \ntodoItem=" + todoItem.toString() +
-                ", \nis assigned to: " + assignee.getSummary() +
+                ", \nis assigned to: " + assignee.toString() +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TodoItemTask that = (TodoItemTask) o;
+        return id == that.id && assigned == that.assigned && todoItem.equals(that.todoItem) && Objects.equals(assignee, that.assignee);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, assigned, todoItem, assignee);
     }
 
     public Person getAssignee() {
@@ -43,9 +58,10 @@ public class TodoItemTask {
             throw new IllegalArgumentException("assignee should not be null");
 
         }
-        else
+        else {
             setAssigned(true);
-        this.assignee = assignee;
+            this.assignee = assignee;
+        }
     }
     public int getId() {
         return id;

@@ -9,9 +9,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class TodoItemTaskTest {
 
     LocalDate deadLine = LocalDate.parse("2022-06-29");
-    Person jn = new Person(1, "Jack","Ninway", "jn@jn.se");
-    TodoItem toDo = new TodoItem(11,"car wash", deadLine, jn );
-    TodoItemTask taskToDo = new TodoItemTask(22, toDo, jn);
+    Person jn = new Person("Jack","Ninway", "jn@jn.se");
+    TodoItem toDo = new TodoItem("car wash", deadLine, jn );
+    TodoItemTask taskToDo = new TodoItemTask( toDo, jn);
 
     @Test
     public void getSummary() {

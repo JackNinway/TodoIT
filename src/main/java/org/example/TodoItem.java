@@ -1,7 +1,10 @@
 package org.example;
 
+import sequencers.TodoItemIdSequencer;
+
 import java.time.LocalDate;
 import  java.time.format.DateTimeFormatter;
+import java.util.Objects;
 
 /** TodoItem Class task assigned to a person
  */
@@ -12,12 +15,25 @@ public class TodoItem {
     private boolean done;
     private Person creator;
 
-    public TodoItem(int id, String title, LocalDate deadLine, Person creator) {
-//        this();
-        this.id = id;
+    public TodoItem(String title, LocalDate deadLine, Person creator) {
+        this.id = TodoItemIdSequencer.nextId();
         setTitle(title);
         setDeadLine(deadLine);
         setCreator(creator);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TodoItem todoItem = (TodoItem) o;
+        return id == todoItem.id && done == todoItem.done && title.equals(todoItem.title) &&
+                taskDescription.equals(todoItem.taskDescription) && deadLine.equals(todoItem.deadLine);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, title, taskDescription, deadLine, done);
     }
 
     public String getSummary(){
@@ -43,7 +59,7 @@ public class TodoItem {
                 ", title='" + title + '\'' +
                 ", deadLine=" + deadLine +
                 ", done=" + done +
-                ", creator=" + creator.getSummary() +
+                ", creator=" + creator.toString() +
                 '}';
     }
 

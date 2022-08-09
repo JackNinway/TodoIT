@@ -4,11 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b20e892c-0f49-4030-8c24-2a91b48b42a2" name="Changes" comment="Person and test">
+    <list default="true" id="b20e892c-0f49-4030-8c24-2a91b48b42a2" name="Changes" comment="ToDo final with all tests">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/AppRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/AppUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sequencers/PersonIdSequencer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sequencers/TodoItemIdSequencer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sequencers/TodoItemTaskIdSequencer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/todoData/AppUserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/todoData/AppUserDAOCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/todoData/PersonDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/todoData/PersonDAOCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/todoData/TodoItemDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/todoData/TodoItemDAOCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/todoData/TodoItemTaskDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/todoData/TodoItemTaskDAOCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/todoData/AppUserDAOCollectionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/todoData/TodoItemTaskDAOCollectionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TodoItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TodoItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TodoItemTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TodoItemTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/PersonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/PersonTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/TodoItemTaskTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/TodoItemTaskTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/TodoItemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/TodoItemTest.java" afterDir="false" />
     </list>
@@ -20,6 +37,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
         <option value="JUnit5 Test Class" />
       </list>
@@ -43,6 +62,7 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
@@ -66,10 +86,11 @@
       <recent name="org.example" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="todoData" />
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TodoItemTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="TodoIT" />
@@ -83,63 +104,63 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TodoItemTaskTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppUserDAOCollectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TodoIT" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="todoData.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.TodoItemTaskTest" />
+      <option name="PACKAGE_NAME" value="todoData" />
+      <option name="MAIN_CLASS_NAME" value="todoData.AppUserDAOCollectionTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TodoItemTaskTest.getSummary" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppUserDAOCollectionTest.persist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TodoIT" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="todoData.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.TodoItemTaskTest" />
-      <option name="METHOD_NAME" value="getSummary" />
+      <option name="PACKAGE_NAME" value="todoData" />
+      <option name="MAIN_CLASS_NAME" value="todoData.AppUserDAOCollectionTest" />
+      <option name="METHOD_NAME" value="persist" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TodoItemTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TodoItemTaskDAOCollectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TodoIT" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="todoData.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.TodoItemTest" />
+      <option name="PACKAGE_NAME" value="todoData" />
+      <option name="MAIN_CLASS_NAME" value="todoData.TodoItemTaskDAOCollectionTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TodoItemTest.getSummary" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TodoItemTaskDAOCollectionTest.persist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TodoIT" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="todoData.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.TodoItemTest" />
-      <option name="METHOD_NAME" value="getSummary" />
+      <option name="PACKAGE_NAME" value="todoData" />
+      <option name="MAIN_CLASS_NAME" value="todoData.TodoItemTaskDAOCollectionTest" />
+      <option name="METHOD_NAME" value="persist" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -147,11 +168,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TodoItemTest" />
-        <item itemvalue="JUnit.TodoItemTaskTest" />
-        <item itemvalue="JUnit.TodoItemTaskTest.getSummary" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.TodoItemTest.getSummary" />
+        <item itemvalue="JUnit.TodoItemTaskDAOCollectionTest.persist" />
+        <item itemvalue="JUnit.TodoItemTaskDAOCollectionTest" />
+        <item itemvalue="JUnit.AppUserDAOCollectionTest" />
+        <item itemvalue="JUnit.AppUserDAOCollectionTest.persist" />
       </list>
     </recent_temporary>
   </component>
@@ -176,7 +197,13 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1656581016213</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="ToDo final with all tests">
+      <created>1657185107755</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1657185107755</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -192,31 +219,36 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Person and test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Person and test" />
+    <MESSAGE value="ToDo final with all tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="ToDo final with all tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/Person.java</url>
-          <line>8</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/TodoItem.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/TodoItemTask.java</url>
-          <line>17</line>
+          <line>21</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/TodoItemTask.java</url>
-          <line>70</line>
-          <option name="timeStamp" value="33" />
+          <url>file://$PROJECT_DIR$/src/main/java/todoData/TodoItemTaskDAOCollection.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/todoData/AppUserDAOCollectionTest.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/todoData/TodoItemTaskDAOCollectionTest.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="47" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
